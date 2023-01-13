@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  color: black;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.box {
+  width: 90%;
+  height: 100vh;
+  /* border: 1px solid greenyellow; */
+  background-color: rgb(227, 227, 227);
+  margin: 0px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.box > figure {
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid blue; */
+  margin-top: 20px;
+  position: relative;
+  transition: 1.5s linear;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+}
+.box > figure > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.box > figure:hover {
+  transform: perspective(800px) translateZ(-100px) rotateY(180deg);
+}
+
+.box > figure > img:nth-of-type(1) {
+  transform: translateZ(-0.1px);
+}
